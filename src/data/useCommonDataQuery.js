@@ -8,6 +8,7 @@ export const useCommonDataQuery = () => {
         siteMetadata {
           title
           description
+          organization
         }
       }
     }

@@ -1,4 +1,9 @@
-ul.navbar-main {
+@import "../../../../styles/variables";
+
+$underlineHeight: 4px;
+$linkColor: $bgColor;
+
+.main {
   display: flex;
   justify-content: flex-end;
   li {
@@ -15,10 +20,10 @@ ul.navbar-main {
       content: "";
       position: absolute;
       width: 100%;
-      height: 3px;
+      height: $underlineHeight;
       bottom: -2px;
       left: 0;
-      background-color: white;
+      background-color: $linkColor;
       visibility: hidden;
       transform: scaleX(0);
       transition: all 0.2s ease-in-out;
@@ -32,8 +37,8 @@ ul.navbar-main {
     }
     [aria-current] {
       font-weight: bold;
-      color: white;
-      border-bottom: 3px solid white;
+      color: $linkColor;
+      border-bottom: $underlineHeight solid $linkColor;
     }
   }
 }

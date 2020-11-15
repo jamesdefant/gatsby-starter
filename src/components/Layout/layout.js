@@ -1,15 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
-import Header from "./header"
-import { useCommonDataQuery } from "../data/useCommonDataQuery"
-// import "../styles/styles.scss"
-
+import Header from "./Header/Header"
+import { useCommonDataQuery } from "../../data/useCommonDataQuery"
+import styles from "./layout.module.scss"
 const Layout = ({ children, sidebar }) => {
 
   const { site } = useCommonDataQuery()
@@ -36,12 +34,10 @@ const Layout = ({ children, sidebar }) => {
           </Row>
         </Container>
 
-        <footer style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, SoulSki Designs
+        <footer className={ styles.footer } >
+          © {new Date().getFullYear()},
+          {' '}
+          { site.siteMetadata.organization }
         </footer>
       </main>
     </>

@@ -2,39 +2,25 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import Navbar from "./Navbar/index"
+import Navbar from "./Navbar"
+import styles from "./header.module.scss"
 
 const Header = ({ siteTitle, siteDescription }) => (
-  <header
-    style={{
-      background: `lightsteelblue`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header className={ styles.header } >
+    <div className={ styles.banner } >
+
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link to="/" >
           {siteTitle}
         </Link>
-
-
       </h1>
+
       <small className="h4 text-muted">
         {siteDescription}
       </small>
+
       <Navbar />
+
     </div>
   </header>
 )

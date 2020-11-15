@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+.header {
+  background-color: $primaryColor;
+  margin-bottom: 1.45rem;
+
+  .banner {
+    margin: 0 auto;
+    max-width: $maxWidth;
+    padding: 1.45rem 1.0875rem 0.2rem;
+
+    h1 a {
+      color: $bgColor;
+      text-decoration: none;
+    }
+  }
+}
