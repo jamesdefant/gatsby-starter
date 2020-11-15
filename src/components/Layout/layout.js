@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col"
 import Header from "./Header/Header"
 import { useCommonDataQuery } from "../../data/useCommonDataQuery"
 import styles from "./layout.module.scss"
+
+
 const Layout = ({ children, sidebar }) => {
 
   const { site } = useCommonDataQuery()
@@ -15,31 +17,35 @@ const Layout = ({ children, sidebar }) => {
     <>
       <Header siteTitle={site.siteMetadata?.title || `Title`}
               siteDescription={site.siteMetadata?.description || `Description`} />
-      <main>
-        <Container fluid>
-          <Row>
+      <div className={ styles.wrapper }>
 
-            { sidebar && (
-              <>
-                <Col md={4} sm={12}>
-                  { sidebar }
-                </Col>
-                <Col md={8} sm={12}>
-                  {children}
-                </Col>
-              </>
-            )}
-            { !sidebar && ( <Col>{children}</Col> )}
+        <main>
+          {children}
+          {/*<Container fluid >*/}
+          {/*  <Row>*/}
 
-          </Row>
-        </Container>
+          {/*    { sidebar && (*/}
+          {/*      <>*/}
+          {/*        <Col md={4} sm={12}>*/}
+          {/*          { sidebar }*/}
+          {/*        </Col>*/}
+          {/*        <Col md={8} sm={12}>*/}
+          {/*          { children }*/}
+          {/*        </Col>*/}
+          {/*      </>*/}
+          {/*    )}*/}
+          {/*    { !sidebar && ( <Col>{ children }</Col> )}*/}
+
+          {/*  </Row>*/}
+          {/*</Container>*/}
+        </main>
 
         <footer className={ styles.footer } >
           © {new Date().getFullYear()},
           {' '}
           { site.siteMetadata.organization }
         </footer>
-      </main>
+      </div>
     </>
   )
 }

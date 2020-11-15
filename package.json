@@ -3,7 +3,7 @@
   "private": true,
   "description": "A basic starter to get up and running with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "James Defant <james@soulski.ca>",
   "dependencies": {
     "bootstrap": "^4.5.3",
     "gatsby": "^2.25.3",
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jamesdefant/gatsby-starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jamesdefant/gatsby-starter/issues"
   }
 }
