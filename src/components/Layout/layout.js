@@ -10,7 +10,7 @@ import { useCommonDataQuery } from "../../data/useCommonDataQuery"
 import styles from "./layout.module.scss"
 
 
-const Layout = ({ children, sidebar }) => {
+const Layout = ({ children }) => {
 
   const { site } = useCommonDataQuery()
   return (

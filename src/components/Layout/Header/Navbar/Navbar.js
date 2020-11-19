@@ -1,7 +1,8 @@
 import React from "react"
-import NavbarItem from "./NavbarItem"
+// import NavbarItem from "./NavbarItem"
 import styles from "./navbar.module.scss"
 import { links } from "./links"
+import { Link } from "gatsby"
 // import { isAuthenticated } from "../utils/auth"
 
 const Navbar = () => {
@@ -13,8 +14,13 @@ const Navbar = () => {
         //   return null
         // else
         return (
-          <NavbarItem key={ key } label={ item.label } url={ item.url } />
-        )})}
+          <li key={ key } >
+            <Link to={ item.url }>
+              { item.label }
+            </Link>
+          </li>
+        )
+      })}
     </ul>
   )
 }
